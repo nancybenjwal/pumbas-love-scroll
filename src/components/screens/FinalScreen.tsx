@@ -30,9 +30,6 @@ const FinalScreen = ({ answers }: FinalScreenProps) => {
     doc.setTextColor(147, 112, 219);
     doc.text("From Your Goomba", pageWidth / 2, 42, { align: "center" });
 
-    // Heart
-    doc.setFontSize(24);
-
     // Divider
     doc.setDrawColor(30, 144, 255);
     doc.line(margin, 65, pageWidth - margin, 65);

@@ -66,7 +66,7 @@ const questions = [
     question: "What are you most excited about for our future?",
     options: [
       "Growing old together",
-      "Our little family of 4 💙",
+      "Our little family of 4",
       "All our adventures ahead",
       "Every single moment with you",
     ],
@@ -78,7 +78,7 @@ const questions = [
       "I'm the smartest and most mature",
       "I'm the most caring and loyal",
       "I'm the funniest and most romantic",
-      "I'm literally perfect, duh 💅",
+      "I'm literally perfect, duh",
     ],
   },
 ];
@@ -119,7 +119,11 @@ const QuizScreen = ({ onComplete }: QuizScreenProps) => {
     <div className="min-h-screen flex flex-col items-center justify-center relative px-4 py-12">
       <Sparkles count={20} />
 
-      <div className={`text-center z-10 max-w-xl w-full transition-all duration-400 ${isTransitioning ? "opacity-0 scale-95" : "opacity-100 scale-100"}`}>
+      <div
+        className={`text-center z-10 max-w-xl w-full transition-all duration-400 ${
+          isTransitioning ? "opacity-0 scale-95" : "opacity-100 scale-100"
+        }`}
+      >
         <div className="mb-8">
           <p className="text-love-blue-soft text-sm uppercase tracking-widest mb-2">
             Question {currentQuestion + 1} of {questions.length}
@@ -178,7 +182,9 @@ const QuizScreen = ({ onComplete }: QuizScreenProps) => {
                 !selectedOption ? "opacity-50 cursor-not-allowed" : ""
               }`}
             >
-              {currentQuestion < questions.length - 1 ? "Next 💙" : "See Your Message ✨"}
+              {currentQuestion < questions.length - 1
+                ? "Next 💙"
+                : "See Your Message ✨"}
             </button>
           </div>
         </div>

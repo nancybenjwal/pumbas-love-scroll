@@ -22,7 +22,6 @@ const KissScreen = ({ onComplete }: KissScreenProps) => {
     if (kissed) return;
     setKissed(true);
 
-    // Create exploding hearts
     const newHearts: ExplodingHeart[] = [];
     for (let i = 0; i < 30; i++) {
       const angle = (i / 30) * Math.PI * 2;
@@ -51,12 +50,11 @@ const KissScreen = ({ onComplete }: KissScreenProps) => {
               Baby, I have one more thing for you…
             </h3>
 
-            <button
-              onClick={handleKiss}
-              className="btn-kiss relative"
-            >
+            <button onClick={handleKiss} className="btn-kiss relative">
               Kiss Me 💋
-              <span className="absolute -top-2 -right-2 text-2xl animate-heart-beat">💙</span>
+              <span className="absolute -top-2 -right-2 text-2xl animate-heart-beat">
+                💙
+              </span>
             </button>
 
             <p className="text-muted-foreground mt-6 text-sm">
@@ -66,9 +64,7 @@ const KissScreen = ({ onComplete }: KissScreenProps) => {
         ) : (
           <div className="relative">
             {/* Central big heart */}
-            <div className="text-9xl animate-heart-beat">
-              💙
-            </div>
+            <div className="text-9xl animate-heart-beat">💙</div>
 
             {/* Exploding hearts */}
             {hearts.map((heart) => (
