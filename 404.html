@@ -1,7 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="refresh" content="0; url=./index.html" />
+    <meta charset="utf-8" />
+    <script>
+      // If the URL contains a dot, it's probably a real file like .js, .css, .png
+      // In that case, do NOT redirect
+      if (!location.pathname.includes(".")) {
+        // SPA fallback: redirect to index.html while keeping the path
+        const redirectUrl =
+          location.protocol +
+          "//" +
+          location.host +
+          location.pathname.replace(/\/+$/, "") +
+          "/";
+        location.replace(redirectUrl);
+      }
+    </script>
   </head>
   <body></body>
 </html>
