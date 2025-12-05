@@ -45,10 +45,10 @@ const questions = [
     id: "whatMakesYouSpecial",
     question: "What makes you the best boyfriend?",
     options: [
-      "I give random kisses 💋",
+      "I give random kisses",
       "I always listen and understand",
       "I make her laugh non-stop",
-      "All of the above, obviously 😏",
+      "All of the above, obviously",
     ],
   },
   {
